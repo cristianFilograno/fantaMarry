@@ -49,4 +49,6 @@
         </div> --}}
       </div>
     </main>
-  </ x-layout>
+  </body>
+  
+  </x-layout>

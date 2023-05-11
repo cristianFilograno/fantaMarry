@@ -15,12 +15,6 @@ class UserController extends Controller
         return view('user.index', compact('user'));
     }
 
-    // public function index()
-    // {
-    //     $players = User::all();
-
-    //     return view('player.index', compact('players'));
-    // }
 
     public function changeAvatar(User $user, AvatarRequest $request){
         // $validated = $request->validate([
@@ -32,4 +26,7 @@ class UserController extends Controller
         ]);
         return redirect()->back()->with('avatarUpdated', 'Complimenti hai aggiornato il tuo avatar');
     }
+
+
+
 }

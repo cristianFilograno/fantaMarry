@@ -23,4 +23,11 @@ class PublicController extends Controller
 
         return view('leaderboard', compact('users'));
     }
+    
+    public function index()
+    {
+        $users = User::all();
+
+        return view('user.list', compact('users'));
+    }
 }

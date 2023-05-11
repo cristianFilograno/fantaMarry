@@ -16,6 +16,9 @@
           <li class="nav-item">
             <a class="nav-link active anchorNav" aria-current="page" href="{{route('post.index')}}">Spotted</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active anchorNav" href="{{route('user.index')}}";>Giocatori</a>
+          </li>
         </ul>
 
       </div>
@@ -61,6 +64,7 @@
           <li class="nav-item">
             <a class="nav-link active anchorNav" href="{{route('register')}}";>Registrati</a>
           </li>
+          
           @endAuth
         </ul>
       </div>

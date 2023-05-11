@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 
 /*
@@ -20,13 +21,16 @@ use App\Http\Controllers\PublicController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/rules', [PublicController::class, 'rules'])->name('regole');
 Route::get('/leaderboard', [PublicController::class, 'showLeaderboard'])->name('leaderboard');
+Route::get('/user/index', [PublicController::class, 'index'])->name('user.index');
+
 
 
 // ROTTE USER
 Route::get('/user/profile/{userId}', [UserController::class, 'showProfile'])->name('user.profile');
-// Route::get('/players/index', [UserController::class, 'index'])->name('player.index');
 Route::put('/user/avatar/{user}', [UserController::class, 'changeAvatar'])->name('user.avatar');
 
+// ROTTE ADMIN
+Route::put('/user/score/{user}', [AdminController::class, 'changeScore'])->name('user.score');
 
 // ROTTE POST
 Route::get('post/index', [PostController::class, 'index'])->name('post.index');
