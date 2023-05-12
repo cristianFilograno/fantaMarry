@@ -1,6 +1,5 @@
 <x-layout>
 
-    {{-- @dd($user->avatar)     --}}
     <div class="container bg-warning">
         <div class="row shadow border my-5">
             <div class="col-12 col-md-4">
@@ -40,6 +39,40 @@
                   </button>
                   
                 </form>
+                @endif
+            </div>
+            <div class="container shadow my-3">
+                <h1>Il mio team:</h1>
+                @if ($team)
+                    <p>Nome del team: {{ $team->name }}</p>
+                    <div class="d-flex">
+                        <div>
+                            <p>Giocatori:</p>
+                            <ul>
+                                @foreach ($team->players as $player)
+                                    <li>{{ $player->name }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <div>
+                            <p>Punteggi:</p>
+                            <ul>
+                                @foreach ($team->players as $player)
+                                    <li>{{ $player->score }}</li>
+                                @endforeach
+                            </ul>
+
+                        </div>
+                        <div>
+                            <p>Punteggo Tot:</p>
+                            <ul>
+                                    <li>{{ $team->scoreTeam }}</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                @else
+                <p>Non hai ancora creato un team</p>
                 @endif
             </div>
         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Team;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\AvatarRequest;
@@ -11,8 +12,10 @@ class UserController extends Controller
     public function showProfile($userId){
         
         $user = User::findOrFail($userId);
+        // $userTeam = $user->team;
+        $team = $user->team;
 
-        return view('user.index', compact('user'));
+        return view('user.index', compact('user', 'team'));
     }
 
 
@@ -26,7 +29,5 @@ class UserController extends Controller
         ]);
         return redirect()->back()->with('avatarUpdated', 'Complimenti hai aggiornato il tuo avatar');
     }
-
-
 
 }

@@ -26,12 +26,12 @@
           @endfor --}}
 
           {{-- METODO FOREACH --}}
-          @foreach ($users as $user)
+          @foreach ($teams as $team)
           <tr>
 
           <td class="number">{{$loop->iteration}}</td>
-           <td class="name"> <a class="anchorLb" href="{{route('user.profile', ['userId'=>$user->id])}}">{{$user->name}}</a></td>
-            <td class="points"> {{ $user->score}}
+           <td class="name"> <a class="anchorLb" href="{{--route('user.profile', ['userId'=>$user->id])--}}">{{$team->name}}</a></td>
+            <td class="points"> {{ $team->scoreTeam}}
               @if ($loop->iteration == 1)
               <img class="gold-medal" src="https://github.com/malunaridev/Challenges-iCodeThis/blob/master/4-leaderboard/assets/gold-medal.png?raw=true" alt="gold medal"/>
 

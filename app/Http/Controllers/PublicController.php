@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Team;
 use App\Models\User;
+use App\Models\Player;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -19,15 +21,15 @@ class PublicController extends Controller
 
     public function showLeaderboard(){
 
-        $users = User::take(10)->orderBy('score', 'DESC')->get();
+        $teams = Team::take(7)->orderBy('scoreTeam', 'DESC')->get();
 
-        return view('leaderboard', compact('users'));
+        return view('leaderboard', compact('teams'));
     }
     
     public function index()
     {
-        $users = User::all();
+        $players = Player::all();
 
-        return view('user.list', compact('users'));
+        return view('user.list', compact('players'));
     }
 }

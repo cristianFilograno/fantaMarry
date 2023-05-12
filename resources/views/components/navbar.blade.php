@@ -44,6 +44,7 @@
                   </form>
                 </li>
                 <li><a class="dropdown-item fw-bold" href="{{route('user.profile', ['userId'=>Auth::user()->id])}}">Profilo</a></li>
+                <li><a class="dropdown-item fw-bold" href="{{route('team.create')}}">Crea il tuo Team</a></li>
               </ul>
             </div>
             {{-- <li class="nav-item">  
