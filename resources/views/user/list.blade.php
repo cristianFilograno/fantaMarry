@@ -24,6 +24,5 @@
 
         </div>
     </div>
-        <input type="number" class="form-control" name="score" id="score" value="{{ $player->score }}">
     
 </x-layout>

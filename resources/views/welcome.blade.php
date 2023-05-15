@@ -17,7 +17,7 @@
       </div>
 
 
-      {{-- SEZIONE CON 3 PALLINI DIMOSTRATIVI/TUTORIAL CLASSIFICA, ISCRIVITI ECC --}}
+      {{-- SEZIONE CON  p3 PALLINI DIMOSTRATIVI/TUTORIAL CLASSIFICA, ISCRIVITI ECC --}}
 
       {{-- 1 --}}
       <div class="row w-100 mx-0">
