@@ -1,19 +1,14 @@
 <x-layout>
     
-    <div class="my-5">
-      <div class="row justify-content-center">
+  <div class="my-5">
+    {{-- COMPONENTE LIVEWIRE --}}
+    @livewire('create-post-form')
+  </div>
 
-        <div class="col-12 col-md-8">
 
-              {{-- COMPONENTE LIVEWIRE --}}
-              @livewire('create-post-form')
-          </div>
-      </div>
-    </div>
-
-  <hr><hr><hr>
-
-  @livewire('show-posts')
+  <div class="my-5 container">
+    @livewire('show-posts')
+  </div>
  
 
     

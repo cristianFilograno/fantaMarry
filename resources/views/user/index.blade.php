@@ -1,21 +1,22 @@
 <x-layout>
 
-    <div class="container bg-warning">
-        <div class="row shadow border my-5">
+    <div class="myContainer my-5 bgA myBorder">
+        <div class="row shadow bg-light border my-5 w-100 mx-0">
             <div class="col-12 col-md-4">
                 <div class="container my-4">
-                    <img src="{{ Storage::url($user->avatar) }}" alt="Avatar" class="image" style="width:100%">
-                    <div class="middle">
-                      <a class="text" href="">CAMBIA</a>
-                      
-                    </div>
+                    <img src="{{ Storage::url($user->avatar) }}" alt="Avatar" class="" style="width:100%">
                   </div>
             </div>
-            <div class="col-12 col-md-8">
-                <h1 class="fw-bold textP my-3 text-center">Profilo di {{ $user->name }}</h1>
-                <p>Email: {{ $user->email }}</p>
-                <p>Punteggio attuale: {{ $user->score }}</p>
-                <p>Data di registrazione: {{ $user->created_at }}</p>
+            <div class="col-12 col-md-8 px-0 text-center text-md-start">
+                <h1 class="fw-bold textB textF my-3 text-uppercase">Profilo di {{ $user->name }}</h1>
+                <p class="lead"> Email: {{ $user->email }}</p>
+                @if($user->team)
+                <p class="lead"> Punteggio attuale: {{ $user->team->score }}</p>
+                @else
+                <p class="lead"> Punteggio attuale: N/A</p>
+
+                @endif
+                <p class="lead"> Data di registrazione: {{ $user->created_at }}</p>
                 @if (Auth::user() && Auth::user()->id == $user->id)
                 <form action="{{ route('user.avatar', ['user' => Auth::user()]) }}" method="POST"
                   enctype="multipart/form-data">
@@ -41,33 +42,32 @@
                 </form>
                 @endif
             </div>
-            <div class="container shadow my-3">
-                <h1>Il mio team:</h1>
+            <div class="container text-center shadow my-3">
+                <p class="textB textF my-3 text-uppercase">Il mio team:</p>
                 @if ($team)
-                    <p>Nome del team: {{ $team->name }}</p>
-                    <div class="d-flex">
-                        <div>
-                            <p>Giocatori:</p>
-                            <ul>
-                                @foreach ($team->players as $player)
-                                    <li>{{ $player->name }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div>
-                            <p>Punteggi:</p>
-                            <ul>
-                                @foreach ($team->players as $player)
-                                    <li>{{ $player->score }}</li>
-                                @endforeach
-                            </ul>
+                    <h3 class=" fw-bold textB textF my-3 text-uppercase">{{ $team->name }}</h3>
+                    <div class="row">
+                        <div class="col-6 col-md-4">
+                            <p class="display-6 fw-bold textB"> PLAYERS:</p>
 
+                                @foreach ($team->players as $player)
+                                    <p>{{ $player->name }}</p>
+                                @endforeach
+                            
                         </div>
-                        <div>
-                            <p>Punteggo Tot:</p>
-                            <ul>
-                                    <li>{{ $team->scoreTeam }}</li>
-                            </ul>
+                        <div class="col-6 col-md-3">
+                            <p class="display-6 fw-bold textB">PUNTEGGI:</p>
+
+                                @foreach ($team->players as $player)
+                                    <p>{{ $player->score }}</p>
+                                @endforeach
+                            
+                        </div>
+                        <div  class="col-12 col-md-4">
+                            <p class="display-6 fw-bold textB">PUNTEGGIO TEAM:</p>
+
+                                    <p>{{ $team->scoreTeam }}</p>
+                            
 
                         </div>
                     </div>

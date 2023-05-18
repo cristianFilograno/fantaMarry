@@ -2,17 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 
 body{
-    background-image: url('https://st8.cannypic.com/thumbs/33/336867_632_canny_pic.jpg')!important;
+  background-image: url('https://st8.cannypic.com/thumbs/33/336867_632_canny_pic.jpg')!important;
+}
+.textP{
+  font-family: 'Lobster Two', cursive;
 }
 
-/* NAVBAR */
-.myNavBg{
+.textF{
+  font-family: 'Dosis', sans-serif;
+}
+
+.bgP{
     background-color: #003049;
 }
 
-.textP{
+.textA{
+  color: #d7c902;
+}
+
+.bgA{
+  background-color: #d7c902;
+}
+
+.textB{
     color: #003049;
 }
+
+/* NAVBAR */
 
 .anchorNav{
     color: white!important;
@@ -20,7 +36,9 @@ body{
 .nav-item{
     font-family: 'Dosis', sans-serif;
     font-size: x-large;
+    
 }
+
 
 
 /* HERO SECTION */
@@ -49,66 +67,36 @@ border: 1px solid rgba(255, 255, 255, 1);
     font-weight: bold;
     
 }
+/* HERO 2 */
+.myBorder{
+  border: 6px solid #003049;
+}
+
+.hr{
+  border: 2px solid #d7c902;
+  width: 70%;
+}
+
+.circle{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #d7c902;
+}
 
 /* USER PROFILE */
-/* .avatar{
-    
-} */
 
-.container {
-    position: relative;
-    width: 50%;
-  }
-  
-  .image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    -ms-transform: translate(-50%, -50%)
-  }
-  
-  .container:hover .image {
-    opacity: 0.7;
-  }
-  
-  .container:hover .middle {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-  }
-  
-  .text {
-    background-color: #e9ff6c;
-    color: #003049;
-    font-size: 16px;
-    padding: 16px 32px;
-    text-decoration: none;
-    font-weight: bolder;
 
-  }
 
   /* SEZIONE 3 BLOB */
 .mysvg{
-  width: 400px;
+  width: 350px;
   position: relative;
 }
 
 
 /* LEADERBOARD */
 main {
-  width: 40rem;
-  height: 43rem;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 5px 15px 8px #e4e7fb;
   box-shadow: 0px 5px 15px 8px #e4e7fb;
@@ -126,32 +114,7 @@ main {
   padding: 2.5rem 2rem;
 }
 
-.share {
-  width: 4.5rem;
-  height: 3rem;
-  background-color: #f55e77;
-  border: 0;
-  border-bottom: 0.2rem solid #c0506a;
-  border-radius: 2rem;
-  cursor: pointer;
-}
 
-.share:active {
-  border-bottom: 0;
-}
-
-.share i {
-  color: #fff;
-  font-size: 2rem;
-}
-
-h1 {
-  font-family: "Rubik", sans-serif;
-  font-size: 1.7rem;
-  color: #141a39;
-  text-transform: uppercase;
-  cursor: default;
-}
 
 #leaderboard {
   width: 100%;
@@ -224,7 +187,7 @@ td {
 }
 
 .ribbon {
-  width: 42rem;
+  width: 102.8%;
   height: 5.5rem;
   top: -0.5rem;
   background-color: #5c5be5;
@@ -234,6 +197,19 @@ td {
   box-shadow: 0px 15px 11px -6px #7a7a7d;
 }
 
+@media screen and (max-width: 1000px) {
+  .ribbon {
+  width: 104.1%;
+  height: 5.5rem;
+  top: -0.5rem;
+  background-color: #5c5be5;
+  position: absolute;
+  left: -1rem;
+  -webkit-box-shadow: 0px 15px 11px -6px #7a7a7d;
+  box-shadow: 0px 15px 11px -6px #7a7a7d;
+  }
+}
+  
 .ribbon::before {
   content: "";
   height: 1.5rem;
@@ -266,60 +242,40 @@ td {
   gap: 2rem;
 }
 
-/* .exit {
-  width: 11rem;
-  height: 3rem;
-  font-family: "Rubik", sans-serif;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  color: #7e7f86;
-  border: 0;
-  background-color: #fff;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-
-.exit:hover {
-  border: 0.1rem solid #5c5be5;
-} */
-
-/* .continue {
-  width: 11rem;
-  height: 3rem;
-  font-family: "Rubik", sans-serif;
-  font-size: 1.3rem;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #5c5be5;
-  border: 0;
-  border-bottom: 0.2rem solid #3838b8;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-
-.continue:active {
-  border-bottom: 0;
-} */
-/* 
-@media (max-width: 740px) {
-    * {
-      font-size: 70%;
-    }
-}
-
-@media (max-width: 500px) {
-    * {
-      font-size: 55%;
-    }
-}
-
-@media (max-width: 390px) {
-    * {
-      font-size: 45%;
-    }
-} */
 
 .anchorLb{
   text-decoration: none;
   color: #003049;
+}
+
+.cardImg{
+  margin: 10px;
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50%;
+}
+
+.cardPost{
+  max-width: 100%;
+  height: 420px;
+}
+
+@media screen and (max-width: 1000px) {
+  .cardPost  {
+    max-width: 100%;
+    height: 300px;
+  }
+}
+
+.mycontainer{
+  width: 40px !important;
+}
+
+.Team{
+  height: 80vh;
+
+}
+
+.selectTeam{
+  height: 80%;
 }

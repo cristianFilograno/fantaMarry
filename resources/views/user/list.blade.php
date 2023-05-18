@@ -1,10 +1,15 @@
 <x-layout>
         <div class="row">
             @foreach ($players as $player)
+            
             <div class="col-12 col-md-4 shadow my-5 py-3 d-flex px-5">
                 <div class="d-flex flex-column mx-5">
-                    <h1>{{$player->name}}</h1>
-                    <h3>{{$player->score}}</h3>
+                    <h1 class="textB fw-bold">{{$player->name}}: <span class="textA"> {{$player->score}}</span></h1>
+                    <h3 class="textB">Eventi:</h3>
+                    @foreach ($player->events as $event)
+                    <p class="lead">-{{$event->name}}</p>
+                        
+                    @endforeach
                 </div>
 
                 @if (Auth::user() && auth()->user()->is_admin === 1)

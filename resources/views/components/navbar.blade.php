@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md py-3 myNavBg">
+<nav class="w-100 navbar navbar-expand-md py-3 bgP">
     <div class="container-fluid">
       <a class="navbar-brand anchorNav" href="{{route('homepage')}}">LOGO</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,6 +45,13 @@
                 </li>
                 <li><a class="dropdown-item fw-bold" href="{{route('user.profile', ['userId'=>Auth::user()->id])}}">Profilo</a></li>
                 <li><a class="dropdown-item fw-bold" href="{{route('team.create')}}">Crea il tuo Team</a></li>
+                @if(Auth::user()->is_admin)
+                {{-- <li><a class="dropdown-item fw-bold position-relative" href="{{route('admin.index')}}">Zona Revisore
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{App\Models\Post::RevisionedCount()}}
+                </span>
+                </a></li> --}}
+                @endif
               </ul>
             </div>
             {{-- <li class="nav-item">  
