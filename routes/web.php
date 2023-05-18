@@ -39,5 +39,5 @@ Route::put('/player/score/{player}', [AdminController::class, 'changeScore'])->n
 Route::get('post/index', [PostController::class, 'index'])->name('post.index');
 
 // ROTTE TEAM
-Route::get('team/create', [TeamController::class, 'create'])->name('team.create');
+Route::get('team/create', [TeamController::class, 'create'])->middleware('auth')->name('team.create');
 Route::post('team/store', [TeamController::class, 'store'])->name('team.store');
