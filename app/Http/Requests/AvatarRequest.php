@@ -22,7 +22,7 @@ class AvatarRequest extends FormRequest
     public function rules(): array
     {
         return [
-        'avatar' => 'required|image|max:1024',
+        'avatar' => 'required|image|max:20480',
 
         ];
     }
