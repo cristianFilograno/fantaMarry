@@ -39,6 +39,25 @@ body{
     
 }
 
+@media screen and (max-width: 500px){
+  .borderY{
+    border-bottom: 2px solid #d7c902;
+  }
+  .borderYY{
+    border-bottom: 2px solid #d7c902;
+    width: 160%; 
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .dnone{
+    display: none;
+  }
+}
+  
+
+
 
 
 /* HERO SECTION */
@@ -76,6 +95,8 @@ border: 1px solid rgba(255, 255, 255, 1);
   border: 2px solid #d7c902;
   width: 70%;
 }
+
+
 
 .circle{
   width: 30px;
@@ -279,3 +300,4 @@ td {
 .selectTeam{
   height: 80%;
 }
+
