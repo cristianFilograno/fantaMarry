@@ -1,7 +1,7 @@
 <nav class="">
     <div class="px-3 w-100 navbar navbar-expand-md py-2 bgP">
       
-      <a class="navbar-brand anchorNav" href="{{route('homepage')}}">LOGO</a>
+      <a class="navbar-brand fs-2 anchorNav textP textA" href="{{route('homepage')}}">FantaMatrimonio</a>
        
       {{-- BUTTONE DROP DOWN RESPONSIVE !rendi bianco! --}}
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
