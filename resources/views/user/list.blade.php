@@ -5,10 +5,10 @@
     </div>
     @endif
 
-        <div class="row">
+        <div class="row w-100 mx-0">
             @foreach ($players as $player)
             
-            <div class="col-12 col-md-4 shadow my-5 py-3 d-flex text-center">
+            <div class="col-12 col-md-4 px-0 shadow my-5 py-3 d-flex text-center">
                 <div class="d-flex flex-column mx-auto">
                     <h1 class="textB fw-bold ">{{$player->name}}: <span class="textA"> {{$player->score}}</span></h1>
                     <div class="scomparsa">
