@@ -16,7 +16,7 @@ class CreatePostForm extends Component
 
     use WithFileUploads;
 
-    public $fotoPost, $title, $body, $user_id, $selectedPlayer, $selectedEvent, $players = [], $events = [], $selectedEvents = [];
+    public $fotoPost, $title, $body, $user_id, $selectedPlayer, $selectedEvent, $players = [], $events = [], $selectedEvents = [], $eventi;
     
 
     // protected $rules =[];
@@ -87,6 +87,8 @@ class CreatePostForm extends Component
 {
     $this->players = Player::all();
     $this->events = Event::all();
+    $this->eventi = Event::where('admin', 0)->get();
+    
 }
 
 public function updatedSelectedPlayer($playerId)

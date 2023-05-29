@@ -65,15 +65,15 @@ body{
     /* From https://css.glass */
 background: rgba(255, 255, 255, 0);
 border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
 backdrop-filter: blur(2px);
 -webkit-backdrop-filter: blur(2px);
 border: 1px solid rgba(255, 255, 255, 1);
 }
 
-.heroImg{
+/* .heroImg{
     box-shadow: 0px 0px 21px 5px rgba(0,0,0,0.58);
-}
+} */
 
 .heroTitle {
     color: #003049!important;
@@ -89,6 +89,9 @@ border: 1px solid rgba(255, 255, 255, 1);
 /* HERO 2 */
 .myBorder{
   border: 6px solid #003049;
+}
+.myBorder2{
+  border-bottom: 2px solid #d7c902;
 }
 
 .hr{
@@ -288,9 +291,6 @@ td {
   }
 }
 
-.mycontainer{
-  width: 40px !important;
-}
 
 .Team{
   height: 80vh;

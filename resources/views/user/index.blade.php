@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="myContainer my-5 bgA myBorder">
+    <div class="container my-5 bgA myBorder">
         <div class="row shadow bg-light border my-5 w-100 mx-0">
             <div class="col-12 col-md-4">
                 <div class="container my-4">
@@ -11,7 +11,7 @@
                 <h1 class="fw-bold textB textF my-3 text-uppercase">Profilo di {{ $user->name }}</h1>
                 <p class="lead"> Email: {{ $user->email }}</p>
                 @if($user->team)
-                <p class="lead"> Punteggio attuale: {{ $user->team->score }}</p>
+                <p class="lead"> Punteggio attuale: {{ $user->team->scoreTeam }}</p>
                 @else
                 <p class="lead"> Punteggio attuale: N/A</p>
 
@@ -33,7 +33,7 @@
                   </div>
                   @endif
                   
-                  <input  type="file" name="avatar" class="my-2 d-block">
+                  <input  type="file" name="avatar" class="my-2">
                   <button type="submit" class="btn btn-danger px-2" data-mdb-ripple-color="dark"
                   style="z-index: 1;">
                   AGGIORNA
@@ -48,7 +48,7 @@
                     <h3 class=" fw-bold textB textF my-3 text-uppercase">{{ $team->name }}</h3>
                     <div class="row">
                         <div class="col-6 col-md-4">
-                            <p class="display-6 fw-bold textB"> PLAYERS:</p>
+                            <p class="display-6 fw-bold textB"> GIOCATORI:</p>
 
                                 @foreach ($team->players as $player)
                                     <p>{{ $player->name }}</p>
@@ -65,10 +65,7 @@
                         </div>
                         <div  class="col-12 col-md-4">
                             <p class="display-6 fw-bold textB">PUNTEGGIO TEAM:</p>
-
-                                    <p>{{ $team->scoreTeam }}</p>
-                            
-
+                            <p>{{ $team->scoreTeam }}</p>
                         </div>
                     </div>
                 @else

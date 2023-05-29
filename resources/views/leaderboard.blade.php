@@ -2,9 +2,9 @@
   <body>
 
     <main class="col-12 col-md-10 mx-auto">
-      <div id="header">
+      <div class="text-center" id="header">
         
-        <h1>Ranking</h1>
+        <h1 class="mx-auto textP textA">CLASSIFICA</h1>
       </div>
       <div id="leaderboard">
         <div class="ribbon"></div>

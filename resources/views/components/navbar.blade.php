@@ -76,7 +76,7 @@
             <a class="nav-link active anchorNav borderY" aria-current="page" href="{{route('leaderboard')}}">Classifica</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active anchorNav borderY" aria-current="page" href="{{route('post.index')}}">Spotted</a>
+            <a class="nav-link active anchorNav borderY" aria-current="page" href="{{route('post.index')}}">Spia</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active anchorNav borderY" href="{{route('user.index')}}";>Giocatori</a>

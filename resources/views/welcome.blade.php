@@ -1,17 +1,17 @@
 <x-layout>
 
   {{-- HERO SECTION --}}
-    <div class="container-fluid col-12 col-md-10 px-4 py-5 shadow glass my-5 ww">
+    <div class="container-fluid col-12 col-md-10 p-3 shadow glass my-3">
       <div class="row flex-lg-row-reverse align-items-center mx-0 justify-content-center w-100">
         <div class="col-12 col-md-6">
-          <img src="https://cdn0.matrimonio.com/vendor/6037/3_2/960/jpg/img-8089_2_86037-165842227029830.jpeg" class="heroImg d-block mx-auto img-fluid my-3" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          <img src="/media/intro.jpg" class="shadow d-block mx-auto img-fluid my-3" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold mb-3 heroTitle text-center">FANTAMARRY</h1>
-          <p class="lead heroBod">Benvenuti a "FantaMarry", l'app che trasforma il matrimonio in una gara emozionante tra gli invitati! Con "FantaMarry", <span class="fw-bold ">ogni ospite diventa un giocatore</span> e riceve punti in base al proprio comportamento durante l'evento. Non si tratta solo di ballare e divertirsi, ma anche di ottenere punti <span class="fw-bold ">bonus</span> per gesti di gentilezza e attenzione verso gli sposi, e di evitare i <span class="fw-bold ">malus</span> per comportamenti inappropriati o poco rispettosi.</p>
+          <h1 class="display-5 fw-bold mb-3 heroTitle text-center">FANTAMATRIMONIO</h1>
+          <p class="lead heroBod">Benvenuti a "FantaMatrimonio", l'app che trasforma il matrimonio in una gara emozionante tra gli invitati! Con "FantaMatrimonio", <span class="fw-bold ">ogni ospite diventa un giocatore</span> e riceve punti in base al proprio comportamento durante l'evento. Non si tratta solo di ballare e divertirsi, ma anche di ottenere punti <span class="fw-bold ">bonus</span> per gesti di gentilezza e attenzione verso gli sposi, e di evitare i <span class="fw-bold ">malus</span> per comportamenti inappropriati o poco rispettosi.</p>
           <div class="gap-5 d-flex justify-content-center">
             <a href="{{ route('regole') }}" type="button" href="" class="btn btn-primary btn-lg px-4 me-md-2">Regole</a>
-            <a href="{{ route('register') }}" type="button" class="btn btn-outline-secondary btn-lg px-4">Iscriviti</a>
+            <a href="{{route('register')}}" type="button" class="btn btn-outline-secondary btn-lg px-4">Iscriviti</a>
           </div>
         </div>
       </div>
@@ -24,28 +24,28 @@
         <p class="text-white h1 fw-bold textP">WEDDING NICO&MARY</p>
       </div>
       <div class="rules">
-        <p class="h2 p-2 textF">Partecipa al FantaMarry seguendo questi semplici punti e leggendo il regolamento!</p>
+        <p class="h2 p-2 textF">Partecipa al FantaMatrimonio seguendo questi semplici punti e leggendo il regolamento!</p>
         <div class="hr mx-auto my-3"></div>
-        <div class="mx-3 my-5 ">
+        <div class="mx-3 my-5">
 
-          <div class="d-flex">
+          <div class="d-flex justify-content-md-center">
             <div class="lead textF fw-bold circle me-3">1.</div>
             <p class="lead textF fw-bold ">Iscriviti</p>
           </div>
-          <div class="d-flex">
+          <div class="d-flex justify-content-md-center">
             <div class="lead textF fw-bold circle me-3">2.</div>
             <p class="lead textF fw-bold ">Crea una rosa di 5 invitati</p>
           </div>
-          <div class="d-flex">
+          <div class="d-flex justify-content-md-center">
             <div class="lead textF fw-bold circle me-3">3.</div>
-            <p class="lead textF fw-bold ">Spera di aver scelto gli invitati giusti</p>
+            <p class="lead textF fw-bold ">Spera di aver scelto bene</p>
           </div>
           
         </div>
 
         <div class="hr mx-auto my-3"></div>
 
-        <p class="h2 p-2 textF">Durante la celebrazione e la festa verranno assegnati dei <span class="textA fw-bold"> BONUS/MALUS</span> precetentemente definiti. A voi invitati non resta che seguire i <span class="textA fw-bold">PUNTI CHIAVE</span> da rispettare, godervi tutta la giornata piena di sorprese e divertimento e provare a essere il <span class="textA fw-bold">VINCITORE</span> del "1° FantaMarry" edizione "Wedding Nico&Mari".
+        <p class="h2 p-2 textF">Durante la celebrazione e la festa verranno assegnati dei <span class="textA fw-bold"> BONUS/MALUS</span> precetentemente definiti. A voi invitati non resta che seguire i <span class="textA fw-bold">PUNTI CHIAVE</span> da rispettare, godervi tutta la giornata piena di sorprese e divertimento e provare a essere il <span class="textA fw-bold">VINCITORE</span> del "1° FantaMatrimonio" edizione "Wedding Nico&Mari".
         </p>
       </div>
 

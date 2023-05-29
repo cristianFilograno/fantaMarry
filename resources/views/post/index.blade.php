@@ -6,6 +6,7 @@
   </div>
 
 
+
   <div class="my-5 container">
     @livewire('show-posts')
   </div>
