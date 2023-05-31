@@ -1,4 +1,9 @@
 <x-layout>
+  @if (session('success'))
+    <div class="alert alert-danger">
+        {{session('success')}}
+    </div>
+  @endif
 
   {{-- HERO SECTION --}}
     <div class="container-fluid col-12 col-md-10 p-3 shadow glass my-3">

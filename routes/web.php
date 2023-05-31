@@ -29,6 +29,7 @@ Route::get('/user/index', [PublicController::class, 'index'])->name('user.index'
 // ROTTE USER
 Route::get('/user/profile/{userId}', [UserController::class, 'showProfile'])->name('user.profile');
 Route::put('/user/avatar/{user}', [UserController::class, 'changeAvatar'])->name('user.avatar');
+Route::delete('/profile', [UserController::class, 'destroy'])->name('profile.destroy');
 
 // ROTTE PLAYER
 

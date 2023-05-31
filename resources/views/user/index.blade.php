@@ -1,4 +1,5 @@
 <x-layout>
+    
 
     <div class="container my-5 bgA myBorder">
         <div class="row shadow bg-light border my-5 w-100 mx-0">
@@ -34,12 +35,19 @@
                   @endif
                   
                   <input  type="file" name="avatar" class="my-2">
-                  <button type="submit" class="btn btn-danger px-2" data-mdb-ripple-color="dark"
+                  <button type="submit" class="btn btn-warning px-2" data-mdb-ripple-color="dark"
                   style="z-index: 1;">
                   AGGIORNA
                   </button>
                   
                 </form>
+
+                <form class="m-2 m-md-0" action="{{ route('profile.destroy') }}" method="POST" onsubmit="return confirm('Sei sicuro di voler cancellare il tuo profilo?');">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Cancella Profilo</button>
+                </form>
+
                 @endif
             </div>
             <div class="container text-center shadow my-3">

@@ -110,6 +110,7 @@ class DatabaseSeeder extends Seeder
             'Sofia Capurso',
             'Alessandro Zonno',
             'Michele Saulle',
+            'Mariangela Erculiani'
 
 
         ];
@@ -154,7 +155,7 @@ class DatabaseSeeder extends Seeder
 
         
         foreach ($events as $event){
-            DB::table('events')->insert([
+            DB::table('events')->updateOrInsert([
                 "name" => $event[0],
                 "scoreEvent" => $event[1],
                 "admin" => $event[2],
@@ -164,9 +165,7 @@ class DatabaseSeeder extends Seeder
         
         
         foreach ($players as $player){
-            DB::table('players')->insert([
-                "name" => $player,
-            ]);
+            DB::table('players')->updateOrInsert(['name' => $player]);
         }
     }
 }

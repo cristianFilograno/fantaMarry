@@ -4,8 +4,8 @@
       <a class="navbar-brand fs-2 anchorNav textP textA" href="{{route('homepage')}}">FantaMatrimonio</a>
        
       {{-- BUTTONE DROP DOWN RESPONSIVE !rendi bianco! --}}
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler navButton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
       </button>
       {{-- INIZIO DROPDOWN RESPONSIBE NAV --}}
       <div class="collapse navbar-collapse" id="navbarsExample04">

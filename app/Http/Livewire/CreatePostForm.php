@@ -85,7 +85,7 @@ class CreatePostForm extends Component
        
     public function mount()
 {
-    $this->players = Player::all();
+    $this->players = Player::orderBy('name')->get();
     $this->events = Event::all();
     $this->eventi = Event::where('admin', 0)->get();
     

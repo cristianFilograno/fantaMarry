@@ -21,7 +21,7 @@ class PublicController extends Controller
 
     public function showLeaderboard(){
 
-        $teams = Team::take(7)->orderBy('scoreTeam', 'DESC')->get();
+        $teams = Team::take(100)->orderBy('scoreTeam', 'DESC')->get();
 
         return view('leaderboard', compact('teams'));
     }
