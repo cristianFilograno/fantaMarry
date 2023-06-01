@@ -28,7 +28,7 @@ class PublicController extends Controller
     
     public function index()
     {
-        $players = Player::all();
+        $players = Player::all()->sortBy('name');
 
         return view('user.list', compact('players'));
     }
