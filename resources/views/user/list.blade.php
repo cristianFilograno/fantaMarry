@@ -15,7 +15,7 @@
                     <div class="scomparsa">
                         <h3 class="textB">Eventi:</h3>
                         @foreach ($player->events as $event)
-                        <p class="lead">-{{$event->name}}</p>
+                        <p class="lead">-{{$event->name}} : {{$event->scoreEvent}}</p>
                             
                         @endforeach
 
