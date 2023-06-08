@@ -6,6 +6,7 @@ use App\Models\Team;
 use App\Models\User;
 use App\Models\Player;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PublicController extends Controller
 {
@@ -28,8 +29,13 @@ class PublicController extends Controller
     
     public function index()
     {
-        $players = Player::all()->sortByDesc('score');
-
+        $players = Player::select('players.*', DB::raw('COUNT(events.id) as events_count'))
+        ->leftJoin('event_player', 'players.id', '=', 'event_player.player_id')
+        ->leftJoin('events', 'event_player.event_id', '=', 'events.id')
+        ->groupBy('players.id')
+        ->orderBy('events_count', 'desc')
+        ->get();
+        
         return view('user.list', compact('players'));
     }
 }
